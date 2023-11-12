@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*Nav is now under the header*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    flex: 1 1 100vw;
+}
+
+header, nav, main, aside, footer{
+    display: flex;
+    margin: 3px;
+    background-color: #a1a1a1;
+    padding: 0.5rem;
+}
+
+header{
+    flex: 1 1 100vw;
+    height: 100px;
+}
+nav{
+    flex: 1 1 100vw; /*The nav now has a width of 100vw.*/
+    height: 100px; /*Fixed height for nav*/
+    align-items: center;
+    justify-content: center;
+}
+main{
+    flex: 20 1 500px;
+    height: calc(100vh - 224px); /*Add nav height + margins (106px) to the previous subtraction (100vh - 118px)*/
+}
+aside{
+    flex: 1 1 200px;
+}
+footer{
+    flex: 1 1 100vw;
+    height: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a{
+    margin: 5%; /*Items spacing*/
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 923px){
+    main{
+        height: calc(100vh - 330px);
+    }
+    aside{
+        flex: 1 1 100vw;
+        height: 100px;
+    }
+} /*Rules for 717px window size removed*/
+
